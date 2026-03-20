@@ -1,6 +1,6 @@
 cask "corgibreak" do
-  version "1.0.1"
-  sha256 "d0b73050ee55d9e0e78ddc6dd64f2a69a1ad8102f7b1fa7a3755fe913428a62b"
+  version "1.0.2"
+  sha256 "f368940b6d4e5644b4d0195bc9d8570a5387e38dcb2f7d6eaad9e2e61ed0a371"
 
   url "https://github.com/VolodymyrM27/CorgiBreak/releases/download/v#{version}/CorgiBreak.zip"
   name "CorgiBreak"
