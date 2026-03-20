@@ -1,6 +1,6 @@
 cask "corgibreak" do
-  version "1.0.2"
-  sha256 "f368940b6d4e5644b4d0195bc9d8570a5387e38dcb2f7d6eaad9e2e61ed0a371"
+  version "1.0.0"
+  sha256 "6b471c1b4c8fee4e19a4726a70ba187d982f4c5b23d5b722a9665eaab0aa68f1"
 
   url "https://github.com/VolodymyrM27/CorgiBreak/releases/download/v#{version}/CorgiBreak.zip"
   name "CorgiBreak"
@@ -8,6 +8,13 @@ cask "corgibreak" do
   homepage "https://github.com/VolodymyrM27/CorgiBreak"
 
   app "CorgiBreak.app"
+
+  caveats <<~EOS
+    CorgiBreak is not notarized. To install, use:
+      brew install --no-quarantine #{token}
+    If you already installed without --no-quarantine, run:
+      xattr -d com.apple.quarantine "#{appdir}/CorgiBreak.app"
+  EOS
 
   zap trash: [
     "~/Library/Preferences/com.corgibreak.app.plist",
